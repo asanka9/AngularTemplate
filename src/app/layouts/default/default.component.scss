@@ -1,11 +1,11 @@
 mat-drawer{
-  width: 100px;
+  width: 250px;
 }
 
 mat-drawer-container{
   height: 100%;
 }
-.host{
+:host{
   display: flex;
   flex-direction: column;
   height: 100%;
