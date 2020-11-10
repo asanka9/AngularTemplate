@@ -12,6 +12,7 @@ export class DefaultComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   sideBarToggle(){
