@@ -8,13 +8,34 @@
         First
       </ng-template>
       <div class="container">
-        <div class="raw">
-          <div class="vidWrapper">
-            <div class="vidContainer">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/StBj0vHMesk"
-              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-            </div>
+        <div class="row" >
+          <div class="mainWrapper col-6">
+            <mat-card>
+              <mat-card-content>
+                <div class="vidWrapper ">
+                  <div class="vidContainer">
+                        <iframe width="700" height="315" src="https://www.youtube.com/embed/StBj0vHMesk"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                  </div>
+                </div>
+                <h2 class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Beatae dolore atque modi soluta. Dolor est hic in totam, corrupti
+                  consequatur impedit harum ad. Consequatur quia qui, similique illo sequi veniam!</h2>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+
+          </div>
+          <div class="col-6" >
+            <cdk-virtual-scroll-viewport itemSize="100" class="scrollContainer">
+              <div *ngFor="let item of numbers" class="scrollItem">
+                ASA
+              </div>
+            </cdk-virtual-scroll-viewport>
           </div>
         </div>
         <h1>sdad</h1>
