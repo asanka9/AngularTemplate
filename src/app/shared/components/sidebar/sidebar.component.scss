@@ -3,6 +3,10 @@
     vertical-align: middle;
     margin-right: 20px;
   }
+  button{
+    outline: none;
+    align-items: center;
+  }
   .profile-card {
     text-align: center;
     padding: 0 20px 20px 20px;
@@ -12,5 +16,10 @@
       object-fit: cover;
       border-radius: 50%;
     }
+  }
+  .subNode:hover{
+    cursor: pointer;
+    margin-left: 0;
+    padding-left: 0;
   }
 }

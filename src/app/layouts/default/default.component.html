@@ -1,15 +1,15 @@
-<app-header (toggleSideBarForMe)="sideBarToggle()"></app-header>
+<app-header (toggleSideBarForMe)="sideBarToggle()" (sendLessonName)="getLessonName($event)"></app-header>
 
 <mat-drawer-container>
 
 
     <mat-drawer mode="side" [opened]='sideBarOpen'>
-      <app-sidebar></app-sidebar>
+      <app-sidebar (sendForTemplate)="getTemplateName($event)" [nameInput]="CourseName"></app-sidebar>
     </mat-drawer>
 
 
   <mat-drawer-content>
-    <router-outlet></router-outlet>
+    <app-dashboard [templateName]="templateName" ></app-dashboard>
     <app-footer></app-footer>
   </mat-drawer-content>
 

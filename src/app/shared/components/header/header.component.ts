@@ -9,6 +9,8 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe:EventEmitter<any> = new EventEmitter();
 
+  @Output() sendLessonName:EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -16,6 +18,10 @@ export class HeaderComponent implements OnInit {
 
   toggleSideBar(){
     this.toggleSideBarForMe.emit();
+  }
+
+  myEvent(courseName){
+    this.sendLessonName.emit(courseName);
   }
 
 }

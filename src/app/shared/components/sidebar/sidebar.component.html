@@ -1,56 +1,23 @@
 <mat-nav-list>
-  <div class="profile-card">
-      <div class="header">
-          <h2>Soufiane FADIL</h2>
-          <h4>example@email.com</h4>
-      </div>
-      <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">
-  </div>
 
-  <mat-divider></mat-divider>
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <mat-tree-node class="subNode" *matTreeNodeDef="let node" matTreeNodePadding (click)="clickOnSub(node.name)" >
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <button mat-icon-button disabled></button>
+      {{node.name }}
+    </mat-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding  >
+      <button (click)="clickOnLesson(node.name)" mat-icon-button matTreeNodeToggle
+              [attr.aria-label]="'Toggle ' + node.name">
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+        </mat-icon>
+      </button>
+      {{node.name }}
+    </mat-tree-node>
+  </mat-tree>
 
-  <h2 matSubheader>Pages</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-  <h2 matSubheader>Pages</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-  <h2 matSubheader>Pages</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-  <h2 matSubheader>Pages</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-  <h2 matSubheader>Pages</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/">Dashboard</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts">Posts</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles">Articles</a>
-
-  <mat-divider></mat-divider>
-
-  <h2 matSubheader>Tools</h2>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-      <mat-icon>import_contacts</mat-icon>
-      Contacts
-  </a>
-
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-      <mat-icon>contact_phone</mat-icon>
-      Leads
-  </a>
-
+  {{courseName}}
 </mat-nav-list>

@@ -13,6 +13,8 @@ import {MatListModule} from '@angular/material/list';
 import {RouterModule} from '@angular/router';
 import { AreaComponent } from './widgets/area/area.component';
 import { ChartModule } from 'angular-highcharts';
+import {MatTreeModule} from '@angular/material/tree';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { ChartModule } from 'angular-highcharts';
     MatButtonModule,
     MatMenuModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatTreeModule
   ],
   exports: [
     HeaderComponent,

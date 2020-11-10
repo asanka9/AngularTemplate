@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DefaultComponent implements OnInit {
 
   sideBarOpen = true;
+  CourseName = "Data Science";
+  templateName ="";
 
   constructor() { }
 
@@ -17,6 +19,14 @@ export class DefaultComponent implements OnInit {
 
   sideBarToggle(){
     this.sideBarOpen = !this.sideBarOpen;
+  }
+
+  getLessonName(name){
+    this.CourseName = name;
+  }
+
+  getTemplateName(name){
+    this.templateName = name;
   }
 
 }

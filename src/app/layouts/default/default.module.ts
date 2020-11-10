@@ -9,6 +9,7 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatIconModule} from '@angular/material/icon';
+import {YouTubePlayerModule} from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSidenavModule,
     MatDividerModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    YouTubePlayerModule
   ]
 })
 export class DefaultModule { }
