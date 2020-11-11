@@ -14,7 +14,7 @@
               <mat-card-content>
                 <div class="vidWrapper ">
                   <div class="vidContainer">
-                        <iframe width="700" height="315" src="https://www.youtube.com/embed/SEnXr6v2ifU"
+                        <iframe width="700" height="315" [src]="vdUrl | safe"
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                   </div>
@@ -31,16 +31,18 @@
 
           </div>
           <div class="col-4" >
-            <cdk-virtual-scroll-viewport itemSize="100" class="scrollContainer">
-              <div *ngFor="let item of numbers" class="scrollItem">
+            <cdk-virtual-scroll-viewport itemSize="100" class="scrollContainer" style="overflow-x: hidden;">
+              <div *ngFor="let item of numbers" class="scrollItem" (click)="clickOnVideoVTab('name')" >
 
-                  <div>
-                    <img class="imageThumb" src="https://img.youtube.com/vi/SEnXr6v2ifU/mqdefault.jpg" >
+                <div class="row">
+                  <div class="col-6">
+                    <img class="imageThumb " [src]="aU" >
                   </div>
-                  <div class="ml-2">
-                    <h4>Angular Material Tutorial - 5 - Button</h4>
+                  <div class="col-6" >
+                    <h4>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur</h4>
                     <p>212 <span mat-icon>home</span></p>
                   </div>
+                </div>
 
                 </div>
 

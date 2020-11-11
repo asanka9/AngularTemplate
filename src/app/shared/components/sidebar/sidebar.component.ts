@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges,ViewEncapsulation } from '@angular/core';
 import {FlatTreeControl} from '@angular/cdk/tree';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material/tree';
 
@@ -74,6 +74,7 @@ interface ExampleFlatNode {
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit,OnChanges {
