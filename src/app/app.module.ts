@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { SharedModule } from './shared/shared.module';
+import { PopupComponent } from './modules/dashboard/popup/popup.component';
 
 //Importing firebase modules
 
@@ -13,6 +14,7 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
+    PopupComponent,
 
 
   ],

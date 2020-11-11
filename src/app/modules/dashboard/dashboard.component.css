@@ -37,17 +37,83 @@
 
 .scrollItem{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid maroon;
   box-sizing: border-box;
-  height: 100px;
+  height: 25%;
+  padding: 2%;
+  background-color: white;
 }
 
 .scrollContainer{
-  height: 400px;
+  height: 100%;
 }
 
 .mainWrapper{
   background-color: white;
 }
+
+.numberOfLikes{
+  padding-right: 100px;
+}
+
+.arrowUp{
+  padding-right: 100px;
+}
+
+.backAll{
+  background-color: white;
+  padding: 10px;
+}
+
+.backWebs{
+  background-color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f16c;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 212, 212, 0.418);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 212, 212, 0.336);
+}
+
+.imageThumb{
+  width: 100%;
+}
+
+button{
+  outline: none;
+}
+
+/* Styles for tab labels */
+.all{
+  background-color: white;
+
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+  background-color: rgb(197, 233, 38);
+}
+
+.mat-tab-label.mat-tab-label-active {
+  background-color: transparent;
+  color: rgb(29, 96, 221);
+}
+
+.mat-tab-label {
+  background-color: transparent;
+}
+
+

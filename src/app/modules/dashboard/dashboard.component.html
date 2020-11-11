@@ -1,20 +1,20 @@
-<div class="">
+<div class="all">
 
 
-  <mat-tab-group animationDuration="0ms" mat-align-tabs="center" color="accent">
+  <mat-tab-group class="" animationDuration="0ms" mat-align-tabs="start" >
     <mat-tab>
-      <ng-template mat-tab-label>
+      <ng-template mat-tab-label class="test">
         <mat-icon class="example-tab-icon">thumb_up</mat-icon>
         First
       </ng-template>
-      <div class="container">
+      <div class="container mt-3">
         <div class="row" >
-          <div class="mainWrapper col-6">
-            <mat-card>
+          <div class="mainWrapper col-8">
+            <div>
               <mat-card-content>
                 <div class="vidWrapper ">
                   <div class="vidContainer">
-                        <iframe width="700" height="315" src="https://www.youtube.com/embed/StBj0vHMesk"
+                        <iframe width="700" height="315" src="https://www.youtube.com/embed/SEnXr6v2ifU"
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                   </div>
@@ -27,14 +27,23 @@
                 <button mat-button>LIKE</button>
                 <button mat-button>SHARE</button>
               </mat-card-actions>
-            </mat-card>
+            </div>
 
           </div>
-          <div class="col-6" >
+          <div class="col-4" >
             <cdk-virtual-scroll-viewport itemSize="100" class="scrollContainer">
               <div *ngFor="let item of numbers" class="scrollItem">
-                ASA
-              </div>
+
+                  <div>
+                    <img class="imageThumb" src="https://img.youtube.com/vi/SEnXr6v2ifU/mqdefault.jpg" >
+                  </div>
+                  <div class="ml-2">
+                    <h4>Angular Material Tutorial - 5 - Button</h4>
+                    <p>212 <span mat-icon>home</span></p>
+                  </div>
+
+                </div>
+
             </cdk-virtual-scroll-viewport>
           </div>
         </div>
@@ -47,9 +56,25 @@
         <mat-icon class="example-tab-icon">thumb_up</mat-icon>
         Second
       </ng-template>
-      <ng-container>
-
-      </ng-container>
+      <div class="container mt-5">
+        <mat-list *ngFor="let item of numbers">
+          <div class="backWebs">
+            <mat-card-content>
+              <mat-list-item>
+                <button mat-raised-button class="mr-5">Pop</button>
+                <span class="numberOfLikes">23</span>
+                <mat-icon class="arrowUp" >home</mat-icon>
+                <img matListAvatar   src="data:image/jpeg;base64,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SpiMBC2HW0yPdpBtugtBJ/dPeFythpFOaNz2+mv+U1GnIteVktAtAtAtAtBhAQEBAQXcJmbmMMZjjlZeoNla40fFpaQQutMs1ryzETH1WJSkzeQvD6YKaWhrWkNAPWha1PEX5t9vY214fMXsa1oDaY8vFg9SAN9/JZpmtWNR77NpMzSQadm9jXWx/Obde6sZ7Rr9/wCTaEGYPY1rW0NLzINu8gD4UFmuW1Y1Hvs2ljsw5o/soo97JjD9z56nH6K5Ms39Ij9CZQwePfE17W1Ug0mx+ilMtqRMR6myXMHuiZEa0MJI2338SlstppFJ8Qbb8VmzpGkOji1kUX0/UfM9rTfnS1bPa0d4jfusy2YjPXvDv6uFr3t0F7WODi2qI/erceS1bibW32jc9t+pzObFIWuDh1aQRfkbXCs6mJhFuDM3tkfJpY7mBwc1wOkh3UbG/qukZrRabe/k23OzyTVG5scTBECGta11UeoNmz8Vv7TfcTERGl2jFm5aCOTC5hdqDXNeQ13i3tX8SVmM8xGuWNe3sbaZ8ykeHh1HmEOO3h0rwUtmtaJifVNtmGzaRhb2WODWGOnB1FpNm6IPXwVrntXX6aNpTZzI4g6I2gMMYDWuoNdV9TfcrPE3n0jxpdo+lToLGxRMLm6XOa1+ojY726u4dynXnWoiITaguKCAgICAgigICAgICAgICAgICAgICAgICAgICAgICAgICAgWqCgICAgICAgICAgICAgICAgICAgICAgICAgICAgwgyqCAgICAgICAgICAgICAgICAgICAgICAgICAgIMKAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD//2Q==">
+                <span matLine >Text with large badge</span>
+                <p matLine>www.w3school.com</p>
+              </mat-list-item>
+            </mat-card-content>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list>
+        <h1>asdferer</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem laboriosam commodi temporibus nihil tempora et aspernatur itaque consequuntur. Incidunt sequi enim sunt. Explicabo debitis quis maiores quae magni nesciunt exercitationem.</p>
+      </div>
     </mat-tab>
 
     <mat-tab>
@@ -57,10 +82,29 @@
         <mat-icon class="example-tab-icon">thumb_up</mat-icon>
         Third
       </ng-template>
+      <div class="container">
+        <mat-list *ngFor="let item of numbers">
+          <div class="backAll">
+            <mat-card-content>
+              <div class="vidWrapper ">
+                <div class="vidContainer">
 
-      <ng-container>
+                      <iframe width="700" height="315" src="https://www.geeksforgeeks.org/"
 
-      </ng-container>
+                      ></iframe>
+                </div>
+              </div>
+              <h2 class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Beatae dolore atque modi soluta. Dolor est hic in totam, corrupti
+                consequatur impedit harum ad. Consequatur quia qui, similique illo sequi veniam!</h2>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </div>
+        </mat-list>
+      </div>
     </mat-tab>
   </mat-tab-group>
 

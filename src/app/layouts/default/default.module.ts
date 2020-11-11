@@ -13,6 +13,8 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import {MatButtonModule} from '@angular/material/button';
     YouTubePlayerModule,
     ScrollingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule,
+    MatBadgeModule
   ]
 })
 export class DefaultModule { }
